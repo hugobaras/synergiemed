@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
 :root {
   --primary: #3db4b4;
-  --header: #f0eae3;
+  --header: #ffffff;
   --header-text: #333;
   --primary-dark: #0056b3;
   --text-color: #333;
@@ -13,7 +15,7 @@
 
 /* Base */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
   background-color: var(--bg-color);
@@ -28,7 +30,8 @@ header {
   align-items: center;
   padding: var(--spacing) 40px;
   background-color: var(--header);
-  color: white;
+  color: var(--header-text);
+  box-shadow: var(--shadow);
 }
 
 header img {
@@ -38,6 +41,11 @@ header img {
 header div:last-child {
   font-size: 24px;
   cursor: pointer;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
 }
 
 /* Layout */
@@ -61,7 +69,10 @@ form {
 
 section {
   width: 300px;
-  text-align: left;
+
+  h2 {
+    text-align: center;
+  }
 }
 
 .auth-container {
