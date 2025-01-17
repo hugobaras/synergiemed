@@ -1,0 +1,167 @@
+:root {
+  --primary: #3db4b4;
+  --header: #f0eae3;
+  --header-text: #333;
+  --primary-dark: #0056b3;
+  --text-color: #333;
+  --bg-color: #ffffff;
+  --border-color: #ccc;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --spacing: 20px;
+  --border-radius: 8px;
+}
+
+/* Base */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  text-align: center;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing) 40px;
+  background-color: var(--header);
+  color: white;
+}
+
+header img {
+  height: 50px;
+}
+
+header div:last-child {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Layout */
+main {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 1em;
+}
+
+/* Sections & Containers */
+section,
+.auth-container,
+form {
+  background-color: white;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: var(--spacing);
+}
+
+section {
+  width: 300px;
+  text-align: left;
+}
+
+.auth-container {
+  margin: 1em auto;
+  width: 500px;
+}
+
+/* Typography */
+h1 {
+  font-size: 24px;
+  color: var(--primary);
+  margin-bottom: var(--spacing);
+  text-align: center;
+}
+
+main h1 {
+  font-size: 28px;
+}
+
+section h2 {
+  font-size: 20px;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+/* Forms */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-group {
+  margin-bottom: var(--spacing);
+  text-align: left;
+  width: 100%;
+}
+
+.form-group label,
+.form-group p {
+  display: block;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-bottom: 8px;
+}
+
+/* Inputs */
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="radio"] {
+  width: auto;
+  margin-right: 8px;
+}
+
+/* Buttons */
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  background-color: var(--primary);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--primary-dark);
+}
+
+button[type="submit"] {
+  padding: 12px;
+  font-size: 18px;
+}
+
+/* Utilities */
+.error {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 10px;
+}

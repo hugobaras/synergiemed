@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Authentification</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="auth-container">
+      <h1>Connexion</h1>
+      <div id="error" class="error"></div>
+      <div class="form">
+        <input type="text" id="username" placeholder="Nom d'utilisateur" />
+        <input type="password" id="password" placeholder="Mot de passe" />
+        <button onclick="authenticate()">Se connecter</button>
+      </div>
+    </div>
+
+    <script>
+      const accounts = [
+        { username: "client", password: "client123" },
+        { username: "fournisseur", password: "fournisseur123" },
+      ];
+
+      function authenticate() {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        const errorDiv = document.getElementById("error");
+
+        const user = accounts.find(
+          (acc) => acc.username === username && acc.password === password
+        );
+
+        if (user) {
+          window.location.href = "form.html";
+        } else {
+          errorDiv.textContent = "Identifiants incorrects";
+        }
+      }
+    </script>
+  </body>
+</html>

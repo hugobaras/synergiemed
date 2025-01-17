@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulaire</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <img
+          src="https://synergiemed.fr/content/themes/synergiemed/library/images/logo_synergiemed_2.svg"
+          alt="Logo"
+        />
+        <span>Formulaire</span>
+      </div>
+      <div>☰</div>
+    </header>
+
+    <main>
+      <div class="form-container">
+        <h1>Formulaire de Questions</h1>
+        <form action="#" method="POST" class="form">
+          <div class="form-group">
+            <label for="question1">1. Quel est votre nom complet ?</label>
+            <input type="text" id="question1" name="question1" required />
+          </div>
+
+          <div class="form-group">
+            <label for="question2">2. Quelle est votre adresse email ?</label>
+            <input type="email" id="question2" name="question2" required />
+          </div>
+
+          <!-- Exemple de questions Oui/Non -->
+          <div class="form-group">
+            <p>3. Avez-vous déjà utilisé nos services ?</p>
+            <label>
+              <input type="radio" name="question3" value="oui" required /> Oui
+            </label>
+            <label>
+              <input type="radio" name="question3" value="non" /> Non
+            </label>
+          </div>
+
+          <div class="form-group">
+            <p>4. Souhaitez-vous recevoir notre newsletter ?</p>
+            <label>
+              <input type="radio" name="question4" value="oui" required /> Oui
+            </label>
+            <label>
+              <input type="radio" name="question4" value="non" /> Non
+            </label>
+          </div>
+
+          <!-- Ajouter d'autres questions similaires -->
+          <div class="form-group">
+            <label for="question5"
+              >5. Quels services aimeriez-vous voir améliorés ?</label
+            >
+            <textarea
+              id="question5"
+              name="question5"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+
+          <!-- Bouton de soumission -->
+          <button type="submit">Soumettre</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
