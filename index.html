@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portail Clients et Fournisseurs</title>
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      h2 {
+        margin: 0;
+      }
+
+      section {
+        height: 20vw;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -17,22 +26,33 @@
 
     <main>
       <section>
-        <h2>- Partenaire</h2>
-        <h2>- Particulier</h2>
-        <p>
-          Cet espace privé vous permet de déclarer votre besoin et de gérer vos
-          dossiers de médiation.
-        </p>
-        <button onclick="location.href='auth.html'">Accéder</button>
+        <div class="title">
+          <h2>- Partenaire</h2>
+          <h2>- Particulier</h2>
+        </div>
+        <div class="body">
+          <p style="text-align: left">
+            Cet espace privé vous permet de gerer une demande de médiation et
+            gérer le suivi de vos dossiers.
+          </p>
+        </div>
+        <div class="bottom">
+          <button onclick="location.href='auth.html'">Accéder</button>
+        </div>
       </section>
 
       <section>
-        <br />
-        <h2>Adhérent/Médiateur</h2>
-        <br />
-        <p>Connectez-vous pour gérer vos affaires courantes.</p>
-        <br />
-        <button onclick="location.href='auth.html'">Accéder</button>
+        <div class="title">
+          <h2>Adhérent/Médiateur</h2>
+        </div>
+        <div class="body">
+          <p style="text-align: left">
+            Connectez-vous pour acceder a vos mediations et leurs suivis.
+          </p>
+        </div>
+        <div class="bottom">
+          <button onclick="location.href='auth.html'">Accéder</button>
+        </div>
       </section>
     </main>
   </body>

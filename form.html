@@ -8,33 +8,46 @@
   </head>
   <body>
     <header>
-      <div>
-        <img
-          src="https://synergiemed.fr/content/themes/synergiemed/library/images/logo_synergiemed_2.svg"
-          alt="Logo"
-        />
-        <span>Formulaire</span>
+      <div class="header-content">
+        <img src="assets/logo_xlarge.png" alt="Logo" />
+        <span>Le partenaire de votre activité médicale</span>
       </div>
       <div>☰</div>
     </header>
 
-    <main>
+    <main style="margin-top: 1em">
       <div class="form-container">
-        <h1>Formulaire de Questions</h1>
+        <h1>Formulaire de questions</h1>
         <form action="#" method="POST" class="form">
           <div class="form-group">
-            <label for="question1">1. Quel est votre nom complet ?</label>
+            <label for="question1">1. Nom, prénom du demandeur </label>
             <input type="text" id="question1" name="question1" required />
           </div>
 
           <div class="form-group">
-            <label for="question2">2. Quelle est votre adresse email ?</label>
-            <input type="email" id="question2" name="question2" required />
+            <label for="question2">2. Coordonnées du demandeur</label>
+            <div style="display: flex">
+              <p style="font-weight: normal; margin-right: 5px">Telephone:</p>
+              &nbsp;
+              <input type="tel" id="question2" name="question2" required />
+            </div>
+            <div style="display: flex">
+              <p style="font-weight: normal; margin-right: 5px">Email:</p>
+              &nbsp;
+              <input
+                type="email"
+                id="question2bis"
+                name="question2bis"
+                required
+              />
+            </div>
           </div>
 
-          <!-- Exemple de questions Oui/Non -->
           <div class="form-group">
-            <p>3. Avez-vous déjà utilisé nos services ?</p>
+            <p>
+              3. Est-ce qu’une demande de prise en charge est en cours auprès de
+              votre mutuelle ?
+            </p>
             <label>
               <input type="radio" name="question3" value="oui" required /> Oui
             </label>
@@ -44,7 +57,10 @@
           </div>
 
           <div class="form-group">
-            <p>4. Souhaitez-vous recevoir notre newsletter ?</p>
+            <p>
+              4. La ou les personnes inclus dans la médiation sont-elles
+              informées de votre démarche ?
+            </p>
             <label>
               <input type="radio" name="question4" value="oui" required /> Oui
             </label>
@@ -53,17 +69,63 @@
             </label>
           </div>
 
-          <!-- Ajouter d'autres questions similaires -->
           <div class="form-group">
-            <label for="question5"
-              >5. Quels services aimeriez-vous voir améliorés ?</label
-            >
-            <textarea
-              id="question5"
-              name="question5"
-              rows="4"
-              required
-            ></textarea>
+            <label for="question1">5. Nom, prénom votre interlocuteur </label>
+            <input type="text" id="question5" name="question1" required />
+          </div>
+
+          <div class="form-group">
+            <label for="question2">6. Coordonnées votre interlocuteur</label>
+            <div style="display: flex">
+              <p style="font-weight: normal; margin-right: 5px">Telephone:</p>
+              <input type="tel" id="question6" name="question6" required />
+            </div>
+            <div style="display: flex">
+              <p style="font-weight: normal; margin-right: 5px">Email:</p>
+              <input
+                type="email"
+                id="question6bis"
+                name="question6bis"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <p>
+              7. Est-ce qu’une demande de prise en charge est en cours auprès de
+              votre mutuelle ?
+            </p>
+            <label>
+              <input type="radio" name="question7" value="Voisinage" required />
+              Voisinage
+            </label>
+            <label>
+              <input type="radio" name="question3" value="Familial" /> Familial
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="question7"
+                value="Entreprise"
+                required
+              />
+              Entreprise
+            </label>
+            <label>
+              <input type="radio" name="question7" value="Creance" /> Creance
+            </label>
+            <label>
+              <input type="radio" name="question7" value="Autre" required />
+              Autre
+            </label>
+          </div>
+
+          <div class="form-group">
+            <div class="form-group">
+              <label for="question1">8. Département </label>
+              <input type="text" id="question1" name="question1" required />
+            </div>
           </div>
 
           <!-- Bouton de soumission -->
